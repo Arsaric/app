@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello, WebVR! - A-Frame Now is the time</title>
-    <meta name="description" content="Hello, WebVR! - A-Frame" />
+    <title>Penguin</title>
+    <meta name="description" content="Penguin" />
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
+  <!-- Penguin Body -->
+  <a-sphere position="0 1 -5" radius="0.5" color="#000000"></a-sphere>
+
+  <!-- White Belly -->
+  <a-sphere position="0 0.9 -4.5" radius="0.45" color="#FFFFFF" scale="0.6 0.8 0.6"></a-sphere>
+
+  <!-- Left Wing -->
+  <a-cylinder position="-0.6 1 -5" radius="0.1" height="0.6" color="#000000" rotation="0 0 45"></a-cylinder>
+
+  <!-- Right Wing -->
+  <a-cylinder position="0.6 1 -5" radius="0.1" height="0.6" color="#000000" rotation="0 0 -45"></a-cylinder>
+
+  <!-- Head -->
+  <a-sphere position="0 1.6 -5" radius="0.3" color="#000000"></a-sphere>
+
+  <!-- Left Eye -->
+  <a-sphere position="-0.1 1.7 -4.7" radius="0.05" color="#FFFFFF"></a-sphere>
+
+  <!-- Right Eye -->
+  <a-sphere position="0.1 1.7 -4.7" radius="0.05" color="#FFFFFF"></a-sphere>
+
+  <!-- Beak -->
+  <a-cone position="0 1.6 -4.5" radius-bottom="0.05" height="0.2" color="#FFA500" rotation="90 0 0"></a-cone>
+
+=
+      <a-box position="-0.2 0.5 -5" depth="0.1" height="0.05" width="0.2" color="#FFA500"></a-box>
+      <a-box position="0.2 0.5 -5" depth="0.1" height="0.05" width="0.2" color="#FFA500"></a-box>
       <a-marker>
         preset='hiro'
         <!-- Adding an OBJ file to an AR Project-->
