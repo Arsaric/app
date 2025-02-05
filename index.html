@@ -6,16 +6,17 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="js/constants.js"></script> 
     <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+    <script src="js/boxSpin.js"></script>
   </head>
   <body>
     <a-scene>
       <a-entity light="type:ambient; color: white;"
         location="0 0 0">
       </a-entity>
-      <a-entity id="box" 
+      <a-entity box-spin id="box" 
         geometry="primitive:box"
         position="0 3 -5"
-        material="color:white">
+        material="color:grey; src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485">
       </a-entity>
       <a-entity environment="preset:checkerboard"></a-entity>
       <a-plane color="#1f1f1f" rotation="-90 0 0" width="30" height="30"></a-plane>
