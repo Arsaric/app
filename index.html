@@ -4,75 +4,84 @@
     <title>Penguin</title>
     <meta name="description" content="Penguin" />
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="js/constants.js"></script> 
+    <script src="constants.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
-    <script src="js/boxSpin.js"></script>
+    <script src="boxSpin.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-entity light="type:ambient; color: white;"
-        location="0 0 0">
+      <a-entity light="type:ambient; color: white;" location="0 0 0">
       </a-entity>
-      <a-entity id="box" box-spin
+      <a-entity
+        id="box"
+        box-spin
         geometry="primitive:box"
         position="0 3 -5"
-        material="color:grey; src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485">
+        material="color:grey; src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485"
+      >
       </a-entity>
       <a-entity environment="preset:checkerboard"></a-entity>
-      <a-plane color="#1f1f1f" rotation="-90 0 0" width="30" height="30"></a-plane>
+      <a-plane
+        color="#1f1f1f"
+        rotation="-90 0 0"
+        width="30"
+        height="30"
+      ></a-plane>
+      <a-entity>
+        <a-sphere
+          position="0 1 -4.7"
+          radius="0.45"
+          color="#FFFFFF"
+          scale="0.6 0.8 0.6"
+        ></a-sphere>
+        <a-cylinder
+          position="-0.6 1 -5"
+          radius="0.1"
+          height="0.6"
+          color="#000000"
+          rotation="0 0 45"
+        ></a-cylinder>
+        <a-cylinder
+          position="0.6 1 -5"
+          radius="0.1"
+          height="0.6"
+          color="#000000"
+          rotation="0 0 -45"
+        ></a-cylinder>
+        <a-sphere position="0 1.6 -5" radius="0.3" color="#000000"></a-sphere>
+        <a-sphere
+          position="-0.1 1.7 -4.7"
+          radius="0.05"
+          color="#FFFFFF"
+        ></a-sphere>
+        <a-sphere
+          position="0.1 1.7 -4.7"
+          radius="0.05"
+          color="#FFFFFF"
+        ></a-sphere>
+        <a-cone
+          position="0 1.6 -4.7"
+          radius-bottom="0.05"
+          height="0.2"
+          color="#FFA500"
+          rotation="90 0 0"
+        ></a-cone>
+        <a-box
+          position="-0.2 0.5 -5"
+          depth="0.1"
+          height="0.05"
+          width="0.2"
+          color="#FFA500"
+        ></a-box>
+        <a-box
+          position="0.2 0.5 -5"
+          depth="0.1"
+          height="0.05"
+          width="0.2"
+          color="#FFA500"
+        ></a-box>
+      </a-entity>
       <a-sphere position="0 1 -5" radius="0.5" color="#000000"></a-sphere>
-      <a-sphere
-        position="0 1 -4.7"
-        radius="0.45"
-        color="#FFFFFF"
-        scale="0.6 0.8 0.6"
-      ></a-sphere>
-      <a-cylinder
-        position="-0.6 1 -5"
-        radius="0.1"
-        height="0.6"
-        color="#000000"
-        rotation="0 0 45"
-      ></a-cylinder>
-      <a-cylinder
-        position="0.6 1 -5"
-        radius="0.1"
-        height="0.6"
-        color="#000000"
-        rotation="0 0 -45"
-      ></a-cylinder>
-      <a-sphere position="0 1.6 -5" radius="0.3" color="#000000"></a-sphere>
-      <a-sphere
-        position="-0.1 1.7 -4.7"
-        radius="0.05"
-        color="#FFFFFF"
-      ></a-sphere>
-      <a-sphere
-        position="0.1 1.7 -4.7"
-        radius="0.05"
-        color="#FFFFFF"
-      ></a-sphere>
-      <a-cone
-        position="0 1.6 -4.7"
-        radius-bottom="0.05"
-        height="0.2"
-        color="#FFA500"
-        rotation="90 0 0"
-      ></a-cone>
-      <a-box
-        position="-0.2 0.5 -5"
-        depth="0.1"
-        height="0.05"
-        width="0.2"
-        color="#FFA500"
-      ></a-box>
-      <a-box
-        position="0.2 0.5 -5"
-        depth="0.1"
-        height="0.05"
-        width="0.2"
-        color="#FFA500"
-      ></a-box>
     </a-scene>
   </body>
 </html>
