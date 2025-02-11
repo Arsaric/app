@@ -1,1 +1,1 @@
-const BOX_SPEED = 10
+const BOX_SPEED = 4
