@@ -10,6 +10,13 @@
   </head>
   <body>
     <a-scene>
+      <a-entity
+        id="gltf"
+        position="0 0 0"
+        scale="0.5 0.5 0.5"
+        gltf-model="https://cdn.glitch.global/6d5aacef-7a2e-457d-8d00-07b35acb108c/tree.gltf?v=1739375790387"
+      >
+      </a-entity>
       <a-entity light="type:ambient; color: white;" location="0 0 0">
       </a-entity>
       <a-entity
@@ -36,9 +43,8 @@
           id="camera"
           position="0 1.5 0"
           rotation="0 0 0"
-                  ></a-entity>
-          <a-entity raycaster objects: .clickable>
-        </a-entity>
+        ></a-entity>
+        <a-entity raycaster="objects: .clickable"> </a-entity>
         <a-entity
           cursor
           position="0 0 -4"
