@@ -12,30 +12,38 @@
     <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
     <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
     <script src="https://unpkg.com/aframe-extras.tube@%5E3.5.x/dist/aframe-extras.tube.min.js"></script>
+    <script src="lookingatbox.js"></script>
   </head>
   <body>
     <a-scene>
       <a-entity
-        id="ocean"
-        ocean="density: 20; width: 50; depth: 50; speed: 4"
-        material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1"
-        rotation="-90 0 0"
-      ></a-entity>
-      <a-entity
-        id="gltf"
-        position="0 0 0"
-        scale="0.5 0.5 0.5"
-        gltf-model="https://github.com/Arsaric/treelowpoly/blob/main/scene.gltf"
+        camera
+        look-controls
+        wasd-controls="fly=true"
+        id="camera"
+        position="0 1.5 0"
+        rotation="0 0 0"
       >
+        <a-entity
+          cursor
+          position="0 0 -4"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: red; shader: flat"
+        >
+        </a-entity>
+        <a-entity raycaster="objects: .clickable">
       </a-entity>
-      <a-entity light="type:ambient; color: white;" location="0 0 0">
+      </a-entity>
+      <a-entity light="type:ambient; color: white;" position="0 0 0">
       </a-entity>
       <a-entity
         id="box"
+                
         box-spin
+        looking-at-box
         geometry="primitive:box"
         position="0 3 -5"
-        material="color:none; src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485"
+        material="src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485"
       >
       </a-entity>
       <a-entity environment="preset:checkerboard"></a-entity>
@@ -47,21 +55,6 @@
         height="500"
       ></a-plane>
       <a-entity id="penguin">
-        <a-entity
-          camera
-          look-controls
-          wasd-controls
-          id="camera"
-          position="0 1.5 0"
-          rotation="0 0 0"
-        ></a-entity>
-        <a-entity raycaster="objects: .clickable"> </a-entity>
-        <a-entity
-          cursor
-          position="0 0 -4"
-          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-          material="color: red; shader: flat"
-        >
         </a-entity>
         <a-sphere
           position="0 1 -4.7"
