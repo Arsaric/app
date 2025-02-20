@@ -9,4 +9,5 @@ AFRAME.registerComponent('click-on-box', {
   boxClicked: function() {
     console.log('I was clicked');
   }
+  
 });

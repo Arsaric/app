@@ -18,6 +18,13 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+        <audio
+          id="muzak"
+          src="https://cdn.glitch.global/6d5aacef-7a2e-457d-8d00-07b35acb108c/pistol-shot-233473.mp3?v=1740068092530"
+          preload="auto"
+        ></audio>
+      </a-assets>
       <a-entity
         camera
         look-controls
@@ -38,6 +45,7 @@
       <a-entity light="type:ambient; color: white;" position="0 0 0">
       </a-entity>
       <a-entity
+        sound="src:#muzak; on: click; loop:false; volume: 5"
         id="box"
         class="clickable"
         click-on-box
