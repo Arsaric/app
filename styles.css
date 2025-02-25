@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* 🔹 UI Overlay for Start Screen */
+  #start-screen {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+  }
+
+  #start-button {
+    background: #28a745;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  #start-button:hover {
+    background: #218838;
+  }
+
+  /* 🔹 Fix for HUD */
+  #hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hide initially */
+  }
