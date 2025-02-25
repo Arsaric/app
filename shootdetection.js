@@ -9,10 +9,10 @@ AFRAME.registerComponent("shoot-detection", {
         let target = camera.components.raycaster.intersectedEls[0];
   
         if (target && target.classList.contains("clickable")) {
-          console.log("✅ Shooting detected! Sending 'shoot' event.");
-          target.emit("shoot"); // ✅ Fire the event
+          console.log("Shooting detected! Sending 'shoot' event.");
+          target.emit("shoot");
         } else {
-          console.log("❌ No target detected.");
+          console.log("No target detected.");
         }
       });
     }

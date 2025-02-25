@@ -9,7 +9,6 @@ AFRAME.registerComponent("mouse-look", {
       this.onClick = this.onClick.bind(this);
       this.onPointerLockChange = this.onPointerLockChange.bind(this);
   
-      // Listen for pointer lock changes
       document.addEventListener("pointerlockchange", this.onPointerLockChange);
       document.addEventListener("click", this.onClick);
     },
@@ -28,7 +27,7 @@ AFRAME.registerComponent("mouse-look", {
       }
     },
     onMouseMove: function (event) {
-      if (!this.isLocked) return; // Ignore movement if pointer lock is lost
+      if (!this.isLocked) return;
   
       let sensitivity = this.data.sensitivity;
       this.yaw -= event.movementX * sensitivity;

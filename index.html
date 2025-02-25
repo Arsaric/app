@@ -15,10 +15,9 @@
     <script src="shootdetection.js"></script>
   </head>
   <body>
-    <!-- 🔹 HUD Display (On-Screen Score) -->
-<div id="hud">
-  <p>Score: <span id="score">0</span></p>
-</div>
+    <div id="hud">
+      <p>Score: <span id="score">0</span></p>
+    </div>
     <a-scene cursor="rayOrigin: mouse">
       <a-assets>
         <audio
@@ -31,7 +30,6 @@
           src="https://cdn.glitch.global/6d5aacef-7a2e-457d-8d00-07b35acb108c/79__plagasul__long_scream.wav?v=1740067907985"
           preload="auto"
         ></audio>
-
         <audio
           id="muzak"
           src="https://cdn.glitch.global/6d5aacef-7a2e-457d-8d00-07b35acb108c/9mm-pistol-shoot-short-reverb-7152.mp3?v=1740068264935"
@@ -44,7 +42,7 @@
         loop="true"
       ></a-sound>
       <a-entity
-      mouse-look
+        mouse-look
         camera
         id="camera"
         position="0 1.5 0"
@@ -56,19 +54,16 @@
           position="0 0 -4"
           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
           material="color: red; shader: flat"
-        >
-        </a-entity>
-        <a-entity raycaster="objects: .clickable"> </a-entity>
+        ></a-entity>
+        <a-entity raycaster="objects: .clickable"></a-entity>
       </a-entity>
-      <a-entity light="type:ambient; color: white;" position="0 0 0">
-      </a-entity>
-      <!---sound="src:#muzak; on: click; loop:false; volume: 5"-->
-            <!-- 🔹 3D Floating Score -->
-<a-entity id="floating-score"
-text="value: Score: 0; align: center; color: white; width: 2"
-position="0 3 -2">
-</a-entity>
-
+      <a-entity light="type:ambient; color: white;" position="0 0 0"></a-entity>
+      <!-- 🔹 3D Floating Score -->
+      <a-entity
+        id="floating-score"
+        text="value: Score: 0; align: center; color: white; width: 2"
+        position="0 3 -2"
+      ></a-entity>
       <a-entity
         id="box"
         class="clickable"
@@ -80,8 +75,7 @@ position="0 3 -2">
         geometry="primitive:box"
         position="0 3 -5"
         material="src:https://cdn.glitch.me/6d5aacef-7a2e-457d-8d00-07b35acb108c/Marble012_4K-JPG_Color.jpg?v=1738770920485"
-      >
-      </a-entity>
+      ></a-entity>
       <a-entity environment="preset:checkerboard"></a-entity>
       <a-plane
         position="0 0.5 0"

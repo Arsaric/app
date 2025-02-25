@@ -8,8 +8,8 @@ AFRAME.registerComponent("shootable", {
     this.el.addEventListener("shoot", this.shootTarget);
   },
   shootTarget: function () {
-    console.log("🔫 Target hit! Adding score...");
-    addScore(10); // ✅ Updates score
+    console.log("Target hit! Adding score...");
+    addScore(10);
     this.moveTarget();
   },
   moveTarget: function () {
